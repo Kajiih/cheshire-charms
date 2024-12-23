@@ -402,11 +402,12 @@
     "name": "KJ's Hextech",
     "semanticHighlighting": true,
     "semanticTokenColors": {
+        "decorator": { "foreground": "#00B3BDa0" },
         "class.declaration": { "foreground": "#CC9B52" },
         "class.decorator": { "foreground": "#c47cbf" },
         "enumMember": { "foreground": "#CC9B52" },
         "meta.decorator": { "foreground": "#c47cbf" },
-        "namespace": { "foreground": "#00B3BD" },
+        "namespace": { "foreground": "#CC9B52" },
         "parameter": { "foreground": "#c47cbf" },
         "property": { "foreground": "#5288BA" },
         "property.declaration": { "foreground": "#bacbe4" },
