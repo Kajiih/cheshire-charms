@@ -1,0 +1,40 @@
+{
+    "name": "cheshire-charms",
+    "displayName": "Cheshire Charms",
+    "description": "Bearded inspired themes created with ReThemizer.",
+    "version": "0.0.1",
+    "author": {
+        "name": "Kajih",
+        "email": "itskajih@gmail.com"
+    },
+    "keywords": [
+        "theme",
+        "dark",
+        "Cheshire",
+        "Charms",
+        "Bearded",
+        "Blueberry",
+        "Hextech",
+        "ReThemizer"
+    ],
+    "engines": {
+        "vscode": "^1.96.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Blueberry",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Blueberry-color-theme.json"
+            },
+            {
+                "label": "Hextech",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Hextech-color-theme.json"
+            }
+        ]
+    }
+}
