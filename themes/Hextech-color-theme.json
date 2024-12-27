@@ -462,7 +462,8 @@
             "name": "Docstring",
             "scope": [
                 "string.quoted.docstring.multi.python",
-                "string.quoted.double.block.python"
+                "string.quoted.double.block.python",
+                "string.quoted.docstring.raw.multi.python"
             ],
             "settings": { "foreground": "#289090a0" }
         },
