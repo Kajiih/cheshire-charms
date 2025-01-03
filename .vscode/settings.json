@@ -1,3 +1,4 @@
 {
-    "cSpell.words": ["cheshire", "Hextech"]
+    "cSpell.words": ["cheshire", "Hextech"],
+    "basedpyright.analysis.typeCheckingMode": "off"
 }

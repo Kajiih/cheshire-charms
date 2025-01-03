@@ -402,21 +402,37 @@
     "name": "KJ's Blueberry",
     "semanticHighlighting": true,
     "semanticTokenColors": {
-        "decorator": { "foreground": "#00B3BDa0" },
+        "namespace": { "foreground": "#8f5a09" },
+        "class": { "foreground": "#CC9B52" },
         "class.declaration": { "foreground": "#CC9B52" },
         "class.decorator": { "foreground": "#c47cbf" },
+        // "enum": { "foreground": "#CC9B52" },
         "enumMember": { "foreground": "#CC9B52" },
-        "meta.decorator": { "foreground": "#c47cbf" },
-        "namespace": { "foreground": "#CC9B52" },
+        "type": { "foreground": "#b7d175" },
         "parameter": { "foreground": "#c47cbf" },
+        "variable": { "foreground": "#B85C40" },
+        "variable.readonly": { "foreground": "#C13838" },
+        "variable.defaultLibrary": { "foreground": "#c93e71" },
         "property": { "foreground": "#5288BA" },
         "property.declaration": { "foreground": "#bacbe4" },
-        "variable": { "foreground": "#B85C40" },
-        "variable.defaultLibrary": { "foreground": "#c93e71" }
+        "decorator": { "foreground": "#00B3BDa0" },
+        // "event": "#ff0000",
+        // "function": "#00B3BD",
+        "method": "#00B3BD",
+        // "macro": "#00B3BD",
+        // "label": "#00B3BD",
+        "comment": { "foreground": "#b3caeb30" },
+        "string": "#7fa758",
+        "regexp": "#7fa758",
+        "keyword": "#815ed8",
+        "number": "#5288BA",
+        "operator": "#c93e71"
     },
     "tokenColors": [
         {
             "scope": [
+                "variable.other.property",
+                "entity.name.namespace",
                 "support.module.elm",
                 "entity.other.inherited-class.python",
                 "variable.other.object",
@@ -463,7 +479,7 @@
             "scope": [
                 "string.quoted.docstring.multi.python",
                 "string.quoted.double.block.python",
-                "string.quoted.docstring.raw.multi.python",
+                "string.quoted.docstring.raw.multi.python"
             ],
             "settings": { "foreground": "#289090a0" }
         },
@@ -477,80 +493,90 @@
             "settings": { "fontStyle": "italic", "foreground": "#28909060" }
         },
         {
-            "scope": ["constant", "support.constant.core.php"],
+            "name": "Constants",
+            "scope": [
+                "constant",
+                "support.constant",
+                "support.constant.core.php",
+                "variable.other.constant"
+            ],
             "settings": { "foreground": "#C13838" }
         },
         {
+            "name": "String",
             "scope": [
-                "meta.section.struct.go variable.other.field.go",
-                "meta.section.struct.go variable.other.declaration.go",
-                "source",
-                "support",
-                "constant.character.entity.named",
-                "meta.jsx.children",
-                "source.lua",
-                "text.html.derivative",
-                "source.graphql meta.selections variable.other.alias.graphql",
-                "source.graphql meta.type.interface.graphql meta.type.object.graphql variable.graphql",
-                "source.graphql variable.arguments.graphql",
-                "JSXNested"
+                "string",
+                "string.template",
+                "string.quoted.single",
+                "string.other.link",
+                "constant.character.escape.regexp",
+                "variable.parameter.url",
+                "string.unquoted.plain.out.yaml",
+                "punctuation.definition.string.end.html source.css",
+                "string.quoted.double.html source.css"
             ],
-            "settings": { "foreground": "#96afd5" }
+            "settings": { "foreground": "#7fa758" }
         },
         {
+            "name": "String Punctuation and constant",
             "scope": [
-                "entity.name.function.decorator",
-                "meta.decorator entity.name.function",
-                "meta.decorator punctuation.decorator",
-                "punctuation.definition.decorator",
-                "meta.decorator variable.other.readwrite.ts",
-                "variable.parameter.gdscript",
-                "entity.name.variable.parameter",
-                "variable.parameter"
+                "string.quoted.single.python punctuation.definition.string.begin.python",
+                "string.quoted.single.python punctuation.definition.string.end.python",
+                "punctuation.definition.string",
+                "punctuation.definition.string.template",
+                "punctuation.definition.string.begin",
+                "punctuation.definition.string.end.html source.js-ignored-vscode",
+                "punctuation.definition.string.end.html source.js",
+                "punctuation.definition.string.end.html.vue",
+                "punctuation.definition.string.end.html source.ts",
+                "punctuation.definition.string.end.html source.tsx",
+                "punctuation.definition.string.end.html source.js.jsx",
+                "punctuation.definition.string.end",
+                "string.quoted.single.python punctuation.definition.string.begin",
+                "string.quoted.single.python punctuation.definition.string.end",
+                "string.quoted.single.python constant.character.escape",
+                "string.quoted.multi.python punctuation.definition.string.begin",
+                "string.quoted.multi.python punctuation.definition.string.end",
+                "string.quoted.multi.python constant.character.escape",
+                "constant.other.symbol.quoted.single.erlang",
+                "constant.other.symbol.quoted.single.erlang punctuation.definition.symbol.begin.erlang",
+                "constant.other.symbol.quoted.single.erlang punctuation.definition.symbol.end.erlang",
+                "meta.import.ts punctuation.definition.variable.svelte",
+                "punctuation.definition.string.end.html source.css-ignored-vscode",
+                "text.html.edge punctuation.definition.variable.js",
+                "constant.character.escape.json"
             ],
-            "settings": { "foreground": "#c47cbf" }
+            "settings": { "foreground": "#bae4cc60" }
         },
         {
-            "scope": ["keyword.control.export", "support.type.object.module"],
+            "name": "Regexp",
+            "scope": ["string.regexp.quoted.single.python"],
+            "settings": { "foreground": "#7fa758" }
+        },
+        {
+            "name": "Special string delimiter",
+            "scope": ["storage.type.string.python"],
+            "settings": { "foreground": "#bae4cc60" }
+        },
+        {
+            "name": "Operators",
+            "scope": [
+                "keyword.operator.comparison",
+                "storage.type.function.arrow",
+                "keyword.operator.lua",
+                "keyword.operator.assignment",
+                "keyword.operator.relational",
+                "keyword.operator.increment",
+                "keyword.operator.decrement",
+                "keyword.operator.logical",
+                "keyword.operator.arithmetic",
+                "keyword.operator.math"
+            ],
             "settings": { "foreground": "#c93e71" }
         },
+
         {
-            "scope": [
-                "support.function",
-                "entity.name.function",
-                "meta.function-call",
-                "meta.function",
-                "meta.method.declaration",
-                "meta.function-call support",
-                "variable.language.super.ts",
-                "source.directive",
-                "meta.function-call.generic",
-                "meta.method-call.static.php",
-                "meta.method-call.php",
-                "meta.class storage.type",
-                "meta.method.groovy",
-                "meta.bracket.square.access",
-                "entity.name.function-call.elixir",
-                "punctuation.output.liquid support.variable.liquid",
-                "meta.function.echo.edge source.js keyword.operator.error-control.js",
-                "entity.name.type.variant.gdscript",
-                "entity.name.function.powershell"
-            ],
-            "settings": { "foreground": "#00B3BD" }
-        },
-        {
-            "scope": [
-                "keyword.control.import",
-                "meta.module.name.elm support",
-                "meta.import.elm support",
-                "keyword.control.at-rule",
-                "punctuation.definition.keyword",
-                "variable.control.import.include",
-                "keyword.other.import.java"
-            ],
-            "settings": { "foreground": "#c93e71" }
-        },
-        {
+            "name": "Control keyword",
             "scope": [
                 "keyword.package.go",
                 "keyword.operator.pointer.go",
@@ -610,7 +636,120 @@
                 "keyword.cmake",
                 "keyword.codetag.notation"
             ],
+            "settings": { "foreground": "#815ed8" }
+        },
+        {
+            "name": "Control import keyword",
+            "scope": [
+                "keyword.control.import",
+                "meta.module.name.elm support",
+                "meta.import.elm support",
+                "keyword.control.at-rule",
+                "punctuation.definition.keyword",
+                "variable.control.import.include",
+                "keyword.other.import.java"
+            ],
+            "settings": { "foreground": "#5d40a1" }
+        },
+        {
+            "name": "Type storage",
+            "scope": [
+                "storage",
+                "meta.var.expr storage.type",
+                "storage.type.function",
+                "keyword.function",
+                "storage.type.class",
+                "storage.type.property",
+                "keyword.other",
+                "keyword.local.lua",
+                "entity.name.class",
+                "meta.function.lua keyword.control.lua",
+                "storage.type.enum",
+                "storage.type.interface",
+                "storage.type.type",
+                "entity.name.type.class.java",
+                "support.class.php",
+                "entity.other.inherited-class.php",
+                "entity.name.type.class.groovy",
+                "storage.type.rust",
+                "entity.name.type.class.swift",
+                "source.svelte meta.script.svelte source.ts entity.name.label.ts",
+                "meta.directive.on.svelte keyword.control.svelte",
+                "storage.type.const.gdscript",
+                "storage.type.var.gdscript",
+                "source.graphql declaration.meta.type keyword",
+                "source.graphql meta.type.interface.graphql keyword.type.graphql",
+                "source.graphql keyword.schema.graphql",
+                "source.graphql keyword.operation.graphql",
+                "source.graphql meta.enum.graphql keyword.enum.graphql",
+                "source.graphql meta.fragment.graphql keyword.fragment.graphql",
+                "storage.type.trait.php",
+                "keyword.type.go",
+                "keyword.var.go",
+                "storage.type.powershell",
+                "keyword.const.go",
+                "keyword.storage.modifier"
+            ],
+            "settings": { "foreground": "#815ed8" }
+        },
+
+        {
+            "scope": [
+                "meta.section.struct.go variable.other.field.go",
+                "meta.section.struct.go variable.other.declaration.go",
+                "source",
+                "support",
+                "constant.character.entity.named",
+                "meta.jsx.children",
+                "source.lua",
+                "text.html.derivative",
+                "source.graphql meta.selections variable.other.alias.graphql",
+                "source.graphql meta.type.interface.graphql meta.type.object.graphql variable.graphql",
+                "source.graphql variable.arguments.graphql",
+                "JSXNested"
+            ],
+            "settings": { "foreground": "#96afd5" }
+        },
+        {
+            "scope": [
+                "entity.name.function.decorator",
+                "meta.decorator entity.name.function",
+                "meta.decorator punctuation.decorator",
+                "punctuation.definition.decorator",
+                "meta.decorator variable.other.readwrite.ts",
+                "variable.parameter.gdscript",
+                "entity.name.variable.parameter",
+                "variable.parameter"
+            ],
+            "settings": { "foreground": "#c47cbf" }
+        },
+        {
+            "scope": ["keyword.control.export", "support.type.object.module"],
             "settings": { "foreground": "#c93e71" }
+        },
+        {
+            "scope": [
+                "support.function",
+                "entity.name.function",
+                "meta.function-call",
+                "meta.function",
+                "meta.method.declaration",
+                "meta.function-call support",
+                "variable.language.super.ts",
+                "source.directive",
+                "meta.function-call.generic",
+                "meta.method-call.static.php",
+                "meta.method-call.php",
+                "meta.class storage.type",
+                "meta.method.groovy",
+                "meta.bracket.square.access",
+                "entity.name.function-call.elixir",
+                "punctuation.output.liquid support.variable.liquid",
+                "meta.function.echo.edge source.js keyword.operator.error-control.js",
+                "entity.name.type.variant.gdscript",
+                "entity.name.function.powershell"
+            ],
+            "settings": { "foreground": "#00B3BD" }
         },
         {
             "scope": ["meta.object-literal.key", "variable.object.property"],
@@ -621,21 +760,6 @@
                 "keyword.other.definition.ini",
                 "support.type.property-name",
                 "entity.name.tag.yaml"
-            ],
-            "settings": { "foreground": "#c93e71" }
-        },
-        {
-            "scope": [
-                "keyword.operator.comparison",
-                "storage.type.function.arrow",
-                "keyword.operator.lua",
-                "keyword.operator.assignment",
-                "keyword.operator.relational",
-                "keyword.operator.increment",
-                "keyword.operator.decrement",
-                "keyword.operator.logical",
-                "keyword.operator.arithmetic",
-                "keyword.operator.math"
             ],
             "settings": { "foreground": "#c93e71" }
         },
@@ -714,92 +838,7 @@
             ],
             "settings": { "foreground": "#5288BA" }
         },
-        {
-            "scope": [
-                "storage",
-                "meta.var.expr storage.type",
-                "storage.type.function",
-                "keyword.function",
-                "storage.type.class",
-                "storage.type.property",
-                "keyword.other",
-                "keyword.local.lua",
-                "entity.name.class",
-                "meta.function.lua keyword.control.lua",
-                "storage.type.enum",
-                "storage.type.interface",
-                "storage.type.type",
-                "entity.name.type.class.java",
-                "support.class.php",
-                "entity.other.inherited-class.php",
-                "entity.name.type.class.groovy",
-                "storage.type.rust",
-                "entity.name.type.class.swift",
-                "source.svelte meta.script.svelte source.ts entity.name.label.ts",
-                "meta.directive.on.svelte keyword.control.svelte",
-                "storage.type.const.gdscript",
-                "storage.type.var.gdscript",
-                "source.graphql declaration.meta.type keyword",
-                "source.graphql meta.type.interface.graphql keyword.type.graphql",
-                "source.graphql keyword.schema.graphql",
-                "source.graphql keyword.operation.graphql",
-                "source.graphql meta.enum.graphql keyword.enum.graphql",
-                "source.graphql meta.fragment.graphql keyword.fragment.graphql",
-                "storage.type.trait.php",
-                "keyword.type.go",
-                "keyword.var.go",
-                "storage.type.powershell",
-                "keyword.const.go",
-                "keyword.storage.modifier"
-            ],
-            "settings": { "foreground": "#c93e71" }
-        },
-        {
-            "name": "String",
-            "scope": [
-                "string",
-                "string.template",
-                "string.quoted.single",
-                "string.other.link",
-                "constant.character.escape.regexp",
-                "variable.parameter.url",
-                "string.unquoted.plain.out.yaml",
-                "punctuation.definition.string.end.html source.css",
-                "string.quoted.double.html source.css"
-            ],
-            "settings": { "foreground": "#7fa758" }
-        },
-        {
-            "name": "String Punctuation and constant",
-            "scope": [
-                "string.quoted.single.python punctuation.definition.string.begin.python",
-                "string.quoted.single.python punctuation.definition.string.end.python",
-                "punctuation.definition.string",
-                "punctuation.definition.string.template",
-                "punctuation.definition.string.begin",
-                "punctuation.definition.string.end.html source.js-ignored-vscode",
-                "punctuation.definition.string.end.html source.js",
-                "punctuation.definition.string.end.html.vue",
-                "punctuation.definition.string.end.html source.ts",
-                "punctuation.definition.string.end.html source.tsx",
-                "punctuation.definition.string.end.html source.js.jsx",
-                "punctuation.definition.string.end",
-                "string.quoted.single.python punctuation.definition.string.begin",
-                "string.quoted.single.python punctuation.definition.string.end",
-                "string.quoted.single.python constant.character.escape",
-                "string.quoted.multi.python punctuation.definition.string.begin",
-                "string.quoted.multi.python punctuation.definition.string.end",
-                "string.quoted.multi.python constant.character.escape",
-                "constant.other.symbol.quoted.single.erlang",
-                "constant.other.symbol.quoted.single.erlang punctuation.definition.symbol.begin.erlang",
-                "constant.other.symbol.quoted.single.erlang punctuation.definition.symbol.end.erlang",
-                "meta.import.ts punctuation.definition.variable.svelte",
-                "punctuation.definition.string.end.html source.css-ignored-vscode",
-                "text.html.edge punctuation.definition.variable.js",
-                "constant.character.escape.json"
-            ],
-            "settings": { "foreground": "#bae4cc60" }
-        },
+
         {
             "scope": [
                 "entity.name.type",
@@ -841,7 +880,6 @@
                 "entity.name.variable",
                 "support.variable.magic",
                 "meta.method.body",
-                "entity.name.variable",
                 "punctuation.definition.variable",
                 "meta.class variable.object.property",
                 "variable.other.constant entity.name.function",
