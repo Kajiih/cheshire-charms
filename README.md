@@ -13,6 +13,7 @@ Bearded inspired themes created with ReThemizer with improvements for Python.
 ![Blueberry](media/blueberry.png)
 
 
-
-
-
+## Export with
+```bash
+vsce publish
+```
