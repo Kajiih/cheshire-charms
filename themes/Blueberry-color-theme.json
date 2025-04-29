@@ -430,6 +430,10 @@
         "operator": "#c93e71",
         "builtinAttribute": "#827b54",
         "generic.attribute": "#827b54",
+        // "selfKeyword": "#d06858",
+        // "selfTypeKeyword": "#d06858",
+
+        "*.crateRoot": "#8f5a09",
 
         "*.reference": { "fontStyle": "italic" },
         "*.mutable": { "fontStyle": "italic bold" }
@@ -1138,7 +1142,7 @@
                 "variable.parameter.function.language.special.cls.python",
                 "variable.parameter.function.language.special.self.python"
             ],
-            "settings": { "foreground": "#ce6b4a" }
+            "settings": { "foreground": "#d06858" }
         },
         {
             "name": "Citation",
