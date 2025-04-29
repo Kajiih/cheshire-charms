@@ -22,7 +22,9 @@
         "method": "#00B3BD",
         // "macro": "#00B3BD",
         // "label": "#00B3BD",
-        "comment": { "foreground": "#b3caeb30" },
+        "comment": { "foreground": "#b3caeb30", "fontStyle": "italic" },
+        "*.documentation": { "foreground": "#289090a0", "fontStyle": "italic" },
+
         "string": "#7fa758",
         "regexp": "#7fa758",
         "keyword": "#815ed8",
