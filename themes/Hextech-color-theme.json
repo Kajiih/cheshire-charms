@@ -402,20 +402,21 @@
     "name": "KJ's Hextech",
     "semanticHighlighting": true,
     "semanticTokenColors": {
-        "namespace": { "foreground": "#8f5a09" },
+        "namespace": { "foreground": "#8f5a09" }, // ref: class
         "class": { "foreground": "#CC9B52" },
         "class.declaration": { "foreground": "#CC9B52" },
         "class.decorator": { "foreground": "#c47cbf" },
-        // "enum": { "foreground": "#CC9B52" },
-        "enumMember": { "foreground": "#CC9B52" },
+        "enum": { "foreground": "#CC9B52" },
+        "enumMember": { "foreground": "#da9164" }, //ref: class
         "type": { "foreground": "#b7d175" },
         "parameter": { "foreground": "#c47cbf" },
         "variable": { "foreground": "#B85C40" },
         "variable.readonly": { "foreground": "#C13838" },
         "variable.defaultLibrary": { "foreground": "#c93e71" },
-        "property": { "foreground": "#5288BA" },
-        "property.declaration": { "foreground": "#bacbe4" },
+        "property": { "foreground": "#787dbc" }, // ref: number
+        // "property.declaration": { "foreground": "#7c95e7" }, // ref: parameter
         "decorator": { "foreground": "#00B3BDa0" },
+        "deriveHelper": { "foreground": "#827b54" }, // ref: class
         // "event": "#ff0000",
         // "function": "#00B3BD",
         "method": "#00B3BD",
@@ -426,7 +427,12 @@
         "regexp": "#7fa758",
         "keyword": "#815ed8",
         "number": "#5288BA",
-        "operator": "#c93e71"
+        "operator": "#c93e71",
+        "builtinAttribute": "#827b54",
+        "generic.attribute": "#827b54",
+
+        "*.reference": { "fontStyle": "italic" },
+        "*.mutable": { "fontStyle": "italic bold" }
     },
     "tokenColors": [
         {
