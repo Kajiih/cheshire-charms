@@ -2,7 +2,7 @@
     "name": "cheshire-charms",
     "displayName": "Cheshire Charms",
     "description": "Bearded inspired themes created with ReThemizer.",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "author": {
         "name": "Kajih",
         "email": "itskajih@gmail.com"
@@ -12,6 +12,11 @@
     "keywords": [
         "theme",
         "dark",
+        "syntax",
+        "semantic",
+        "highlighting",
+        "color",
+        "editor",
         "Cheshire",
         "Charms",
         "Bearded",
