@@ -34,6 +34,8 @@
         "operator": "#c93e71",
         "builtinAttribute": "#827b54",
         "generic.attribute": "#827b54",
+        "interface": "#ae5254",
+        "derive": "#ae5254a0",
 
         "*.crateRoot": "#8f5a09",
 
